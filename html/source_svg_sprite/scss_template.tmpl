@@ -1,0 +1,26 @@
+{#common}%svg_sprite {
+	font-size: 10px;
+}
+
+%svg_sprite:before {
+     content:' ';
+     vertical-align:middle;
+     display: inline-block;
+     background-image: url("{svgPath}");
+     background-repeat: no-repeat;
+     background-size: {relWidth}em {relHeight}em;
+ }
+
+{/common}
+{#svg}
+@mixin svg_sprite_{name} {
+	&::before {
+		background-position: {relPositionX}em {relPositionY}em;
+		width: {relWidth}em;
+		height: {relHeight}em;
+	}
+
+	@extend %svg_sprite;
+
+}
+{/svg}

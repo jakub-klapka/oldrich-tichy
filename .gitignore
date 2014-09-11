@@ -1,0 +1,6 @@
+# Created by .gitignore support plugin (hsz.mobi)
+resources
+.idea
+html/source_css/modules/_svg_sprite.scss
+html/build
+html/node_modules

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/*
+Rhythm
+*/
+@import "inc/rhythm";
+@include rhythm-init( 14px, ( 24em/14em ), 'golden section' );
+
+/*
+Vars
+*/
+$toolbar_height: 80px;
+$content_widht: 1024px;
+
+$dark_blue: #2e3c41;
+$light_blue: #3e4e54;

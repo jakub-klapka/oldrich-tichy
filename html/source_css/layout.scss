@@ -1,0 +1,61 @@
+@import "global";
+
+/*
+Reset
+*/
+@import "inc/normalize";
+
+html {
+	box-sizing: border-box;
+	@include rhythm-normalize();
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+/*
+Modules
+*/
+@import "modules/svg_sprite";
+
+/*
+Layout
+*/
+html {
+	background: url( 'http://placehold.it/2000x2000' ) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.content_wrap {
+	position: absolute;
+	top:100%;
+	width: 100%;
+}
+
+.toolbar {
+	height: $toolbar_height;
+	background-image: linear-gradient( to right, $dark_blue 0%, $dark_blue 50%, $light_blue 50%, $light_blue 100% );
+	}
+	.toolbar__inner {
+		width: $content_widht;
+		margin: 0 auto;
+		background-image: linear-gradient( to right, $dark_blue 0%, $dark_blue 237px, $light_blue 237px, $light_blue 100% );
+		height: 100%;
+
+		&::after {
+			content: '';
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+	.toolbar__logo {
+		vertical-align: middle;
+		font-size: 0;
+		height: 1px;
+		display: inline-block;
+		color: transparent;
+		}
+		.toolbar__logo__image {
+			@include svg_sprite_logo();
+		}

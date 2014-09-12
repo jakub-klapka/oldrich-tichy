@@ -13,7 +13,10 @@ var gulp = require( 'gulp' ),
 	path = require( 'path' ),
 	livereload = require( 'gulp-livereload' ),
 	svg_sprites = require( 'gulp-svg-sprites' ),
-	imagemin = require( 'gulp-imagemin' );
+	imagemin = require( 'gulp-imagemin' ),
+	requirejs = require( 'gulp-requirejs' ),
+	run = require( 'gulp-run' ),
+	shell = require( 'gulp-shell' );
 
 var sass_config = {
 
@@ -74,6 +77,18 @@ gulp.task( 'css_watch', function() {
 	} );
 } );
 dev_tasks.push( 'css_watch' );
+
+
+/*
+JS
+ */
+gulp.task( 'js', function(){
+
+	return gulp.src('')
+		.pipe( shell( 'r.js.cmd -o name="layout" out="../build/js/layout.js" mainConfigFile="_config.js" findNestedDependencies=true',
+		{ cwd: 'source_js' }) );
+
+} );
 
 
 /*

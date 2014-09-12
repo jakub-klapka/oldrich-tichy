@@ -96,7 +96,7 @@ Livereload
  */
 gulp.task( 'livereload', function(){
 	livereload.listen();
-	gulp.watch( ['*.html', 'build/**/*'], function( evt ){
+	gulp.watch( ['*.html', 'build/**/*', 'source_js/**/*'], function( evt ){
 		livereload.changed( evt.path );
 	} );
 } );

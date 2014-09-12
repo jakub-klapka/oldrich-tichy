@@ -1,11 +1,15 @@
 /* global require */
 require( ['_config'], function(){
 
-	require( ['domReady!', 'test', 'jquery'], function( doc, test, $ ){
+	require( ['domReady!', 'jquery', 'stickUp', 'modules/image_paralax'], function( doc, $, stickup, image_paralax ){
 
-		Object.create( test ).init( $('.toolbar__logo') );
+		//Menu sticking
+		$( '.toolbar' ).stickUp();
 
-		Object.create( test ).init( $('.test') );
+		//Image paralaxes
+		$( '.image_paralax' ).each( function(){
+			Object.create( image_paralax ).init( $(this) );
+		} );
 
 	} );
 

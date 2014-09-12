@@ -1,8 +1,9 @@
 /* global require */
 require.config({
+	waitSeconds: 0,
 	paths: {
 		'jquery': 'libs/jquery-2.1.1',
 		'domReady': 'libs/domReady',
-		'test': 'modules/test'
+		'stickUp': 'libs/stickUp'
 	}
 });

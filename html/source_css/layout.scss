@@ -23,20 +23,51 @@ Modules
 Layout
 */
 html {
-	background: url( 'http://placehold.it/2000x2000' ) no-repeat center center fixed;
-	background-size: cover;
+//	background: url( 'http://placehold.it/2000x2000' ) no-repeat center center fixed;
+//	background-size: cover;
 }
+
+.static_bg {
+	display: block;
+	position: fixed;
+	z-index: -1;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	transform: translateZ(0);
+	background: url('http://lorempixel.com/1920/1920/city?v=1') no-repeat center center fixed;
+//	background: url('http://placehold.it/2000x2000') no-repeat center center fixed;
+	background-size: cover;
+	}
+	.static_bg__image {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
 
 .content_wrap {
 	position: absolute;
 	top:100%;
 	width: 100%;
+	min-width: $content_widht;
 }
 
 .toolbar {
 	height: $toolbar_height;
 	background-image: linear-gradient( to right, $dark_blue 0%, $dark_blue 50%, $light_blue 50%, $light_blue 100% );
+	transform: translateZ(0);
+	z-index: 10;
+	
 	}
+
+	.toolbar.isStuck {
+		left: 0;
+		right: 0;
+		top: 0;
+		position: fixed;
+	}
+	
 	.toolbar__inner {
 		width: $content_widht;
 		margin: 0 auto;
@@ -59,3 +90,19 @@ html {
 		.toolbar__logo__image {
 			@include svg_sprite_logo();
 		}
+
+.content {
+	background: #FFF;
+}
+
+.image_paralax {
+	height: 500px;
+	overflow: hidden;
+	z-index: 1;
+
+	}
+	.image_paralax__image {
+		width: 100%;
+		display: block;
+		height: auto;
+	}

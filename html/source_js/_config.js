@@ -4,6 +4,12 @@ require.config({
 	paths: {
 		'jquery': 'libs/jquery-2.1.1',
 		'domReady': 'libs/domReady',
-		'stickUp': 'libs/stickUp'
+		'stickUp': 'libs/stickUp',
+		'lazyload': 'libs/jquery.lazyload'
+	},
+	shim: {
+		lazyload: {
+			deps: ['jquery']
+		}
 	}
 });

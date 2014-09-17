@@ -32,7 +32,7 @@ define( ['jquery'], function( $ ){
 			this.top_position = this.wrapper.offset().top;
 			this.window_height = this.window.height();
 			this.wrapper_height = this.wrapper.outerHeight();
-			this.image_height = this.image.height();
+			this.image_height = this.image.outerHeight();
 
 		},
 

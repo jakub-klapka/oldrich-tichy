@@ -36,7 +36,7 @@ html {
 	top: 0;
 	right: 0;
 	transform: translateZ(0);
-	background: url('http://lorempixel.com/1920/1920/city?v=1') no-repeat center center fixed;
+	background: url('../images/main_background.jpg') no-repeat center center fixed;
 //	background: url('http://placehold.it/2000x2000') no-repeat center center fixed;
 	background-size: cover;
 	}
@@ -55,6 +55,7 @@ html {
 
 .toolbar {
 	height: $toolbar_height;
+	background: $dark_blue;
 	background-image: linear-gradient( to right, $dark_blue 0%, $dark_blue 50%, $light_blue 50%, $light_blue 100% );
 	transform: translateZ(0);
 	z-index: 10;
@@ -102,7 +103,17 @@ html {
 
 	}
 	.image_paralax__image {
+		box-sizing: content-box;
 		width: 100%;
-		display: block;
-		height: auto;
+		height: 0;
+		position: relative;
+
+		img {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: auto;
+			left: 0;
+			top: 0;
+		}
 	}

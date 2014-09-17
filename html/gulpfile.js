@@ -22,6 +22,10 @@ var sass_config = {
 
 };
 
+var imagemin_config = {
+	progressive: true
+};
+
 var dev_tasks = [];
 
 /*
@@ -89,6 +93,27 @@ gulp.task( 'js', function(){
 		{ cwd: 'source_js' }) );
 
 } );
+
+/*
+Images
+ */
+gulp.task( 'images', function(){
+
+	var non_supported = gulp.src( [ 'source_images/**/*', '!*.{jpg,jpeg,gif,png,svg}'], { base: 'source_images' } )
+		.pipe( gulp.dest( 'build/images' ) );
+
+	var supported = gulp.src( [ 'source_images/**/*.{jpg,jpeg,gif,png,svg}'], { base: 'source_images' } )
+		.pipe( plumber() )
+		.pipe( imagemin( imagemin_config ) )
+		.pipe( gulp.dest( 'build/images' ) );
+
+	return merge_stream( non_supported, supported );
+
+} );
+gulp.task( 'images_watch', function(){
+	gulp.watch( 'source_images/**/*', ['images'] );
+} );
+dev_tasks.push( 'images_watch' );
 
 
 /*

@@ -1,6 +1,21 @@
 @import "global";
 
 /*
+Fonts
+*/
+@font-face {
+	font-family: 'Adelle Sans';
+	src: url('../fonts/adellesans_light-webfont.eot');
+	src: url('../fonts/adellesans_light-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/adellesans_light-webfont.woff2') format('woff2'),
+	url('../fonts/adellesans_light-webfont.woff') format('woff'),
+	url('../fonts/adellesans_light-webfont.ttf') format('truetype'),
+	url('../fonts/adellesans_light-webfont.svg#adelle_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*
 Reset
 */
 @import "inc/normalize";
@@ -59,7 +74,6 @@ html {
 	background-image: linear-gradient( to right, $dark_blue 0%, $dark_blue 50%, $light_blue 50%, $light_blue 100% );
 	transform: translateZ(0);
 	z-index: 10;
-	
 	}
 
 	.toolbar.isStuck {
@@ -72,8 +86,14 @@ html {
 	.toolbar__inner {
 		width: $content_widht;
 		margin: 0 auto;
-		background-image: linear-gradient( to right, $dark_blue 0%, $dark_blue 237px, $light_blue 237px, $light_blue 100% );
+		background-image: linear-gradient( to right, $dark_blue 0%, $dark_blue $logo_width, $light_blue $logo_width, $light_blue 100% );
 		height: 100%;
+
+		font-size: 0;
+
+		& > * {
+			font-size: 1rem;
+		}
 
 		&::after {
 			content: '';
@@ -84,12 +104,64 @@ html {
 	.toolbar__logo {
 		vertical-align: middle;
 		font-size: 0;
-		height: 1px;
+		height: 100%;
 		display: inline-block;
 		color: transparent;
+		padding-left: 45px;
+		width: $logo_width;
 		}
 		.toolbar__logo__image {
+			display: inline-block;
+			height: 100%;
+			line-height: ( $toolbar_height - 5px );
 			@include svg_sprite_logo();
+		}
+
+	.toolbar__navigation {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		width: ( $content_widht - $logo_width );
+		position: relative;
+		}
+		.toolbar__navigation__menu {
+			list-style: none;
+			padding: 0 40px;
+			margin: 0;
+			display: block;
+			text-align: justify;
+			height: 100%;
+
+			&::after {
+				content: '';
+				width: 100%;
+				display: inline-block;
+			}
+			}
+			.toolbar__navigation__menu__item {
+				display: inline-block;
+				height: 100%;
+
+				a {
+					display: block;
+					line-height: $toolbar_height;
+					padding: 0 10px;
+					font-family: "Adelle Sans", Arial;
+					color: #FFF;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: 12px/1;
+				}
+			}
+		.toolbar__navigation__indicator {
+			position: absolute;
+			height: 4px;
+			width: 0;
+			left: 0;
+			bottom: 0;
+			background: lighten( $light_blue, 20% );
+			transition-property: width, transform;
+			transition-duration: 200ms;
 		}
 
 .content {

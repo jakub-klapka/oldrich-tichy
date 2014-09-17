@@ -3,6 +3,9 @@
 gulp tasks:
 	dev - watchers
 	css - compile sass
+	fonts - cop fonts
+	images - optimize images
+	js - compile js
  */
 
 var gulp = require( 'gulp' ),
@@ -114,6 +117,14 @@ gulp.task( 'images_watch', function(){
 	gulp.watch( 'source_images/**/*', ['images'] );
 } );
 dev_tasks.push( 'images_watch' );
+
+/*
+Fonts
+ */
+gulp.task( 'fonts', function(){
+	return gulp.src( 'source_fonts/**/*', { base: 'source_fonts' } )
+		.pipe( gulp.dest( 'build/fonts' ) );
+} );
 
 
 /*

@@ -1,7 +1,8 @@
-/* global define */
-define( ['jquery'], function( $ ){
+/* global jQuery */
+( function( $ ){
 
-	return {
+
+	var MenuNavigation = {
 
 		init: function() {
 
@@ -20,7 +21,7 @@ define( ['jquery'], function( $ ){
 
 			$( window ).on( 'scroll', $.proxy( this.checkForBreakpoint, this ) );
 
-			this.menu.find('a').on('click', function(event){
+			this.menu.find('a' ).add( '.home_slider__scroll_down' ).on('click', function(event){
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 			});
@@ -99,4 +100,10 @@ define( ['jquery'], function( $ ){
 
 	};
 
-} );
+
+	$( function() {
+		MenuNavigation.init();
+	} );
+
+
+} )( jQuery );

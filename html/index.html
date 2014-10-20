@@ -12,8 +12,15 @@
 	<!--<img class="static_bg__image" src="http://placehold.it/2000x2000" alt=""/>-->
 </div>
 
-<div class="content_wrap">
+<div class="home_slide">
+	<div class="home_slider__inner">
+		<h1 class="home_slider__name">Oldřich <strong>Tichý</strong></h1>
+		<h2 class="home_slider__meta">obrazy <span class="home_slider__meta__separator">|</span> kresby <span class="home_slider__meta__separator">|</span> objekty</h2>
+		<a class="home_slider__scroll_down" href="#1">Posunout níže</a>
+	</div>
+</div>
 
+<div class="content_wrap">
 	<header class="toolbar">
 		<div class="toolbar__inner">
 			<a class="toolbar__logo" href="">Oldřich Tichý<i class="toolbar__logo__image"></i></a>
@@ -30,6 +37,7 @@
 				<div class="toolbar__navigation__indicator" aria-hidden="true" id="menu_indicator"></div>
 			</nav>
 		</div>
+		<a class="toolbar__language_link" href="">English</a>
 	</header>
 
 	<section class="content">
@@ -175,7 +183,13 @@
 
 </div>
 
-<script type="text/javascript" src="source_js/require.js" data-main="source_js/layout"></script>
+<script type="text/javascript" src="source_js/libs/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="source_js/libs/jquery.lazyload.js"></script>
+<script type="text/javascript" src="source_js/libs/stickUp.js"></script>
+
+<script type="text/javascript" src="source_js/layout.js"></script>
+<script type="text/javascript" src="source_js/image_paralax.js"></script>
+<script type="text/javascript" src="source_js/menu_navigation.js"></script>
 
 </body>
 </html>

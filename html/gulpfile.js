@@ -47,7 +47,8 @@ gulp.task( 'svg_sprite', function(){
 			preview: false,
 			templates: {
 				css: require( 'fs' ).readFileSync("source_svg_sprite/scss_template.tmpl", "utf-8")
-			}
+			},
+			padding: 10
 		}) )
 		.pipe( gulp.dest( 'build' ) );
 } );

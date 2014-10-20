@@ -1,7 +1,7 @@
-/* global define */
-define( ['jquery'], function( $ ){
+/* global jQuery */
+( function( $ ) {
 
-	return {
+	var ImageParalax = {
 
 		init: function( el ) {
 
@@ -66,4 +66,15 @@ define( ['jquery'], function( $ ){
 
 	};
 
-} );
+
+	//Init
+	$( function(){
+
+		$( '.image_paralax' ).each( function(){
+			Object.create( ImageParalax ).init( $(this) );
+		} );
+
+	} );
+
+
+} )( jQuery );

@@ -61,6 +61,62 @@ html {
 		height: 100%;
 	}
 
+.home_slide {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	right: 0;
+	}
+	.home_slider__inner {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate( -50%, -50% );
+	}
+	%home_slider_text {
+		display: block;
+		color: #FFF;
+		font-family: "Adelle Sans", Arial;
+		text-transform: uppercase;
+		line-height: 1.1;
+		text-align: center;
+		text-shadow: 0 0 10px black;
+
+	}
+	.home_slider__name {
+		@extend %home_slider_text;
+		font-size: 45px;
+		font-weight: bold;
+		letter-spacing: 15px;
+
+		strong {
+			display: block;
+			font-weight: bold;
+			font-size: 110px;
+			letter-spacing: 20px;
+		}
+	}
+	.home_slider__meta {
+		@extend %home_slider_text;
+		font-size: 20px;
+		font-weight: normal;
+		text-shadow: 0 0 5px #000;
+		}
+		.home_slider__meta__separator {
+			margin: 0 20px;
+		}
+
+	.home_slider__scroll_down {
+		font-size: 0;
+		color: transparent;
+		margin-left: calc( 50% - ( 45px / 2 ) );
+
+		&::before {
+			@include svg_sprite_scroll_bottom();
+		}
+	}
+
 .content_wrap {
 	position: absolute;
 	top:100%;
@@ -74,6 +130,8 @@ html {
 	background-image: linear-gradient( to right, $dark_blue 0%, $dark_blue 50%, $light_blue 50%, $light_blue 100% );
 	transform: translateZ(0);
 	z-index: 10;
+	position: relative;
+
 	}
 
 	.toolbar.isStuck {
@@ -81,6 +139,10 @@ html {
 		right: 0;
 		top: 0;
 		position: fixed;
+
+		@include respond-to( 'max-content' ) {
+			position: relative !important;
+		}
 	}
 	
 	.toolbar__inner {
@@ -114,7 +176,9 @@ html {
 			display: inline-block;
 			height: 100%;
 			line-height: ( $toolbar_height - 5px );
-			@include svg_sprite_logo();
+			&::before {
+				@include svg_sprite_logo();
+			}
 		}
 
 	.toolbar__navigation {
@@ -123,6 +187,11 @@ html {
 		vertical-align: middle;
 		width: ( $content_widht - $logo_width );
 		position: relative;
+
+		@include respond-to( 'english_wrap' ) {
+			width: ( ( $content_widht - $logo_width ) - 100px );
+		}
+
 		}
 		.toolbar__navigation__menu {
 			list-style: none;
@@ -138,19 +207,22 @@ html {
 				display: inline-block;
 			}
 			}
+			%nav_menu_item_style {
+				display: block;
+				line-height: $toolbar_height;
+				padding: 0 10px;
+				font-family: "Adelle Sans", Arial;
+				color: #FFF;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 12px/1;
+			}
 			.toolbar__navigation__menu__item {
 				display: inline-block;
 				height: 100%;
 
 				a {
-					display: block;
-					line-height: $toolbar_height;
-					padding: 0 10px;
-					font-family: "Adelle Sans", Arial;
-					color: #FFF;
-					text-decoration: none;
-					text-transform: uppercase;
-					font-size: 12px/1;
+					@extend %nav_menu_item_style;
 				}
 			}
 		.toolbar__navigation__indicator {
@@ -163,6 +235,13 @@ html {
 			transition-property: width, transform;
 			transition-duration: 200ms;
 		}
+
+	.toolbar__language_link {
+		@extend %nav_menu_item_style;
+		position: absolute;
+		right: 20px;
+		top: 0;
+	}
 
 .content {
 	background: #FFF;

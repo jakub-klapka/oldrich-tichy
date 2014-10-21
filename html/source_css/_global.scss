@@ -4,7 +4,7 @@
 Rhythm
 */
 @import "inc/rhythm";
-@include rhythm-init( 14px, ( 24em/14em ), 'golden section' );
+@include rhythm-init( 18px, ( 24em/18em ), 'golden section' );
 
 /*
 Vars
@@ -12,6 +12,7 @@ Vars
 $toolbar_height: 80px;
 $content_widht: 1024px;
 $logo_width: 237px;
+$sidebar_width: 254px;
 
 $dark_blue: #2e3c41;
 $light_blue: #3e4e54;

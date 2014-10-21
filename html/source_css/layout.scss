@@ -243,9 +243,26 @@ html {
 		top: 0;
 	}
 
+@import "modules/typo";
+
 .content {
+	@extend %typo;
+
+	padding: rhythm(1) 0;
+
 	background: #FFF;
-}
+	color: $light_blue;
+
+	position: relative;
+	}
+	.content__inner {
+		width: $content_widht;
+		margin: 0 auto;
+	}
+	.content__placeholder {
+		position: absolute;
+		top: -$toolbar_height;
+	}
 
 .image_paralax {
 	height: 500px;
@@ -266,5 +283,61 @@ html {
 			height: auto;
 			left: 0;
 			top: 0;
+		}
+	}
+
+
+.split {
+
+	}
+	.split__item {
+		margin-bottom: rhythm(1);
+
+		&::after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+		}
+		.split__item__heading {
+			float: left;
+			$margin: 20px;
+			width: $sidebar_width - $margin;
+			border-top: 1px solid lighten( $light_blue, 30% );
+			text-align: right;
+			position: relative;
+			top: -1px;
+		}
+		.split__item__content {
+			float: right;
+			width: $content_widht - $sidebar_width;
+		}
+		.split__heading.split__heading {
+			font-size: inherit;
+			line-height: inherit;
+			font-weight: bold;
+		}
+
+.show_more {
+	display: none;
+	}
+	.show_more__button {
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		transition: transform 500ms;
+
+		&::before {
+			@include svg_sprite_scroll_bottom_small();
+		}
+
+		&:active,
+		&:focus {
+			outline: none;
+		}
+
+		&.is-open {
+			transform: rotate( 180deg );
 		}
 	}

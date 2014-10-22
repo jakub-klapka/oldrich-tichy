@@ -28,7 +28,7 @@
 			<nav class="toolbar__navigation">
 				<ul class="toolbar__navigation__menu" id="menu">
 					<li class="toolbar__navigation__menu__item"><a href="#journal">Journal</a></li>
-					<li class="toolbar__navigation__menu__item"><a href="#2">Dílo</a></li>
+					<li class="toolbar__navigation__menu__item"><a href="#dilo">Dílo</a></li>
 					<li class="toolbar__navigation__menu__item"><a href="#3">Výstavy</a></li>
 					<li class="toolbar__navigation__menu__item"><a href="#4">Texty</a></li>
 					<li class="toolbar__navigation__menu__item"><a href="#5">Biografie</a></li>
@@ -59,6 +59,38 @@
 
 						<!--<button class="show_more__button" aria-controls="show_more_1"></button>-->
 						<div class="show_more" id="show_more_1" aria-hidden="true">
+							<p><span data-image_placeholder class="image_placeholder" data-src="//lorempixel.com/200/100/abstract" data-alt="" data-class="float float-left" data-width="200" data-height="100"></span>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolorem, ipsum modi
+								nostrum omnis quaerat quasi repellat rerum veniam? Accusantium ad cum minima odio
+								placeat qui quod rem reprehenderit, similique!</p>
+
+							<p>Accusamus deserunt ipsam nobis quam reprehenderit voluptates. A asperiores aut
+								consectetur deserunt eligendi fugiat laudantium nesciunt non officia, officiis provident
+								quas quia rerum sunt tempore totam, velit vero voluptates voluptatibus.</p>
+
+							<p>Dolor eos ipsa natus quae! Adipisci aperiam debitis dignissimos dolorem est
+								exercitationem facere fugiat id illum incidunt ipsum nam nesciunt nihil, nobis
+								perspiciatis quam reprehenderit repudiandae? Dolorem eveniet fuga incidunt.</p>
+
+							<p>Accusamus in quasi temporibus. Atque dolorem ducimus eos esse eum excepturi fuga fugiat,
+								incidunt laborum laudantium, optio pariatur provident quia quo repellat rerum sapiente?
+								A accusamus amet ex fuga obcaecati!</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="split__item">
+					<header class="split__item__heading"><time datetime="2014-01-01">21 | 6 | 2014</time></header>
+					<div class="split__item__content">
+
+						<h3 class="split__heading">Lorem ipsum dolor sit amet.</h3>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis et eveniet excepturi
+							itaque magnam minima nam porro quas quis similique totam, voluptates? A impedit nam nemo
+							odio provident sapiente.</p>
+
+						<!--<button class="show_more__button" aria-controls="show_more_1"></button>-->
+						<div class="show_more" id="show_more_2" aria-hidden="true">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolorem, ipsum modi
 								nostrum omnis quaerat quasi repellat rerum veniam? Accusantium ad cum minima odio
 								placeat qui quod rem reprehenderit, similique!</p>
@@ -89,38 +121,7 @@
 							odio provident sapiente.</p>
 
 						<!--<button class="show_more__button" aria-controls="show_more_1"></button>-->
-						<div class="show_more" id="show_more_1" aria-hidden="true">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolorem, ipsum modi
-								nostrum omnis quaerat quasi repellat rerum veniam? Accusantium ad cum minima odio
-								placeat qui quod rem reprehenderit, similique!</p>
-
-							<p>Accusamus deserunt ipsam nobis quam reprehenderit voluptates. A asperiores aut
-								consectetur deserunt eligendi fugiat laudantium nesciunt non officia, officiis provident
-								quas quia rerum sunt tempore totam, velit vero voluptates voluptatibus.</p>
-
-							<p>Dolor eos ipsa natus quae! Adipisci aperiam debitis dignissimos dolorem est
-								exercitationem facere fugiat id illum incidunt ipsum nam nesciunt nihil, nobis
-								perspiciatis quam reprehenderit repudiandae? Dolorem eveniet fuga incidunt.</p>
-
-							<p>Accusamus in quasi temporibus. Atque dolorem ducimus eos esse eum excepturi fuga fugiat,
-								incidunt laborum laudantium, optio pariatur provident quia quo repellat rerum sapiente?
-								A accusamus amet ex fuga obcaecati!</p>
-						</div>
-					</div>
-				</article>
-
-				<article class="split__item">
-					<header class="split__item__heading"><time datetime="2014-01-01">21 | 6 | 2014</time></header>
-					<div class="split__item__content">
-
-						<h3 class="split__heading">Lorem ipsum dolor sit amet.</h3>
-
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis et eveniet excepturi
-							itaque magnam minima nam porro quas quis similique totam, voluptates? A impedit nam nemo
-							odio provident sapiente.</p>
-
-						<!--<button class="show_more__button" aria-controls="show_more_1"></button>-->
-						<div class="show_more" id="show_more_1" aria-hidden="true">
+						<div class="show_more" id="show_more_3" aria-hidden="true">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolorem, ipsum modi
 								nostrum omnis quaerat quasi repellat rerum veniam? Accusantium ad cum minima odio
 								placeat qui quod rem reprehenderit, similique!</p>
@@ -144,7 +145,123 @@
 
 			</div>
 
-			<div id="2"><div id="3"></div></div>
+		</div>
+	</section>
+
+	<section class="image_paralax">
+		<div class="image_paralax__image" style="padding-top: 100%;"><!-- (width/height)*100 -->
+			<img data-original="build/images/paralax_1.jpg" alt="" width="1337" height="1337"/>
+		</div>
+	</section>
+
+	<section class="content">
+		<div class="content__inner">
+
+			<div id="dilo" class="content__placeholder"></div>
+
+			<h1 class="content__heading">Dílo</h1>
+
+			<div class="gallery">
+				<ul class="gallery__menu">
+					<li class="gallery__menu__item active"><button data-cat="all">Vše</button></li>
+					<li class="gallery__menu__item"><button data-cat="obrazy">Obrazy</button></li>
+					<li class="gallery__menu__item"><button data-cat="kresby">Kresby</button></li>
+					<li class="gallery__menu__item"><button data-cat="objekty">Objekty</button></li>
+				</ul>
+
+				<div class="gallery__full_image">
+					<button class="gallery__full_image__close">Zavřít</button>
+					<button class="gallery__full_image__prev">Předchozí</button>
+					<!--<img src="//lorempixel.com/950/700/abstract" alt="" class="gallery__full_image__image"/>-->
+					<img alt="" class="gallery__full_image__image"/>
+					<button class="gallery__full_image__next">Další</button>
+					<div class="gallery__full_image__description"></div>
+				</div>
+
+				<div class="gallery__items">
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/950/700/abstract" data-width="950" data-height="700" data-cat="obrazy">
+						<img data-original="//lorempixel.com/300/200/abstract" width="300" height="200" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Vrš</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/700/700/abstract" data-width="700" data-height="700" data-cat="kresby">
+						<img data-original="//lorempixel.com/300/300/abstract" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Test</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/450/700/abstract" data-width="450" data-height="700" data-cat="objekty">
+						<img data-original="//lorempixel.com/200/300/abstract" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Objekt</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/700/700/abstract" data-width="700" data-height="700" data-cat="kresby">
+						<img data-original="//lorempixel.com/300/300/abstract" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Test</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/950/700/abstract" data-width="950" data-height="700" data-cat="obrazy">
+						<img data-original="//lorempixel.com/300/200/abstract" width="300" height="200" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Vrš</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/700/700/abstract" data-width="700" data-height="700" data-cat="kresby">
+						<img data-original="//lorempixel.com/300/300/abstract" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Test</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/450/700/abstract" data-width="450" data-height="700" data-cat="objekty">
+						<img data-original="//lorempixel.com/200/300/abstract" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Objekt</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/700/700/abstract" data-width="700" data-height="700" data-cat="kresby">
+						<img data-original="//lorempixel.com/300/300/abstract" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Test</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/950/700/abstract" data-width="950" data-height="700" data-cat="obrazy">
+						<img data-original="//lorempixel.com/300/200/abstract" width="300" height="200" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Vrš</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/700/700/abstract" data-width="700" data-height="700" data-cat="kresby">
+						<img data-original="//lorempixel.com/300/300/abstract" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Test</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/450/700/abstract" data-width="450" data-height="700" data-cat="objekty">
+						<img data-original="//lorempixel.com/200/300/abstract" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Objekt</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/700/700/abstract" data-width="700" data-height="700" data-cat="kresby">
+						<img data-original="//lorempixel.com/300/300/abstract" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Test</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+					<div class="gallery__items__item" data-full="//lorempixel.com/950/700/abstract" data-width="950" data-height="700" data-cat="obrazy">
+						<img data-original="//lorempixel.com/300/200/abstract" width="300" height="200" alt="" class="gallery__items__item__image"/>
+						<div class="gallery__items__item__description">Nadpis fotky</div>
+						<div class="gallery__items__item__description_placeholder" aria-hidden="true"><strong>2013</strong>    |    <strong>Vrš</strong>    |    olej na plátně    |  100 x 150 cm</div>
+					</div>
+
+
+
+				</div>
+			</div>
 
 		</div>
 	</section>
@@ -170,40 +287,6 @@
 		.<br>
 		.<br>
 		.<br>
-		<div id="4">4</div>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		<div id="5">5</div>
-		.<br>
-		.<br>
-		.<br>
-		<div id="6">6</div>
-		.<br>
-		.<br>
-		.<br>
-	</section>
-
-	<section class="image_paralax">
-		<div class="image_paralax__image" style="padding-top: 100%;"><!-- (width/height)*100 -->
-			<img data-original="build/images/paralax_1.jpg" alt="" width="1337" height="1337"/>
-		</div>
-	</section>
-
-	<section class="content">
-		content<br>
 		.<br>
 		.<br>
 		.<br>
@@ -228,19 +311,7 @@
 		.<br>
 		.<br>
 		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
-		.<br>
+		<div id="2"><div id="3"><div id="4"><div id="5"><div id="6"></div></div></div></div></div>
 	</section>
 
 </div>
@@ -254,6 +325,7 @@
 <script type="text/javascript" src="source_js/image_paralax.js"></script>
 <script type="text/javascript" src="source_js/menu_navigation.js"></script>
 <script type="text/javascript" src="source_js/show_more.js"></script>
+<script type="text/javascript" src="source_js/gallery.js"></script>
 
 </body>
 </html>

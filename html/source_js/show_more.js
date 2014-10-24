@@ -10,6 +10,10 @@
             this.open = false;
 
             this.bindEvents();
+
+            this.onHeightChange = function() {
+                $( document ).trigger( 'lumi_height_changed' );
+            };
         },
 
         bindEvents: function() {
@@ -30,13 +34,13 @@
         toggle: function() {
 
             if( !this.open ) {
-                this.el.velocity( 'slideDown', { duration: 500 } );
+                this.el.velocity( 'slideDown', { duration: 500, complete: this.onHeightChange } );
                 this.open = true;
                 this.el.attr( 'aria-hidden', 'false' );
                 this.button.addClass( 'is-open' );
                 this.loadImages();
             } else {
-                this.el.velocity( 'slideUp', { duration: 500 } );
+                this.el.velocity( 'slideUp', { duration: 500, complete: this.onHeightChange } );
                 this.open = false;
                 this.el.attr( 'aria-hidden', 'true' );
                 this.button.removeClass( 'is-open' );

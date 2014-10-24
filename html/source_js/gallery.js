@@ -24,6 +24,10 @@
             this.next_image = false;
 
             this.bindEvents();
+
+            this.onHeightChange = function() {
+                $( document ).trigger( 'lumi_height_changed' );
+            };
         },
 
         bindEvents: function() {
@@ -58,13 +62,15 @@
             image.addClass( 'is-active' );
 
             this.full_image_image
+                .attr( 'src', '' )
                 .attr( 'src', image.data( 'full' ) )
                 .attr( 'width', image.data( 'width' ) )
                 .attr( 'height', image.data( 'height' ) );
+            this.onHeightChange();
             this.full_image_desc.html( image.find( '.gallery__items__item__description_placeholder' ).html() );
 
             if( !this.full_open ) {
-                this.full_image_el.velocity( 'slideDown', { duration: 500 } );
+                this.full_image_el.velocity( 'slideDown', { duration: 500, complete: this.onHeightChange } );
             }
 
             this.full_open = true;
@@ -120,7 +126,7 @@
         },
 
         closeFullImage: function() {
-            this.full_image_el.velocity( 'slideUp', { duration: 500 } );
+            this.full_image_el.velocity( 'slideUp', { duration: 500, complete: this.onHeightChange } );
             this.gallery_items.removeClass( 'is-active' );
             this.full_open = false;
         },
@@ -146,11 +152,13 @@
                 new_items = all_new_items.not( ':visible' );
             }
 
+            var self = this;
             old_items.velocity( 'fadeOut', {
                 duration: 500,
                 display: 'inline-block',
                 complete: function( el ){
                     $( el ).hide();
+                    self.onHeightChange();
                 }
             } );
             new_items.velocity( 'fadeIn', {

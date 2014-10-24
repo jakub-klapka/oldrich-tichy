@@ -88,6 +88,11 @@
             &::after {
                 @include svg_sprite_gallery_arrow();
             }
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
         }
         .gallery__full_image__prev {
             @extend %gallery_buttons;

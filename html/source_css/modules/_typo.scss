@@ -25,11 +25,12 @@
     }
 
     h2 {
-        @include rhythm-text( 26px );
+        @include rhythm-text( 18px );
+        margin-left: $sidebar_width;
     }
 
     h3 {
-        @include rhythm-text( 22px );
+        @include rhythm-text( 16px );
     }
 
     .float {
@@ -47,6 +48,14 @@
 
     .image_placeholder {
         display: none;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
 }

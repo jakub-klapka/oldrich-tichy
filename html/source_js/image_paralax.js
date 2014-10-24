@@ -24,6 +24,14 @@
 				t.setVars();
 				t.checkForScroll();
 			} );
+			this.window.load( function() {
+				t.setVars();
+				t.checkForScroll();
+			} );
+			$( document ).on( 'lumi_height_changed', function() {
+				t.setVars();
+				t.checkForScroll();
+			} );
 
 		},
 

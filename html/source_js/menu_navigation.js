@@ -57,6 +57,7 @@
 				current_breakpoint = false,
 				found = false;
 
+			var self = this;
 			$.each( this.reversed_breakpoints, function( i, breakpoint ){
 				if( found === true ) {
 					return;

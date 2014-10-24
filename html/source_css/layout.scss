@@ -111,6 +111,7 @@ html {
 		font-size: 0;
 		color: transparent;
 		margin-left: calc( 50% - ( 45px / 2 ) );
+		display: inline-block;
 
 		&::before {
 			@include svg_sprite_scroll_bottom();
@@ -254,6 +255,11 @@ html {
 	color: $light_blue;
 
 	position: relative;
+
+	&.is-inverse {
+		background: $light_blue;
+		color: #FFF;
+	}
 	}
 	.content__inner {
 		width: $content_widht;
@@ -292,6 +298,10 @@ html {
 	}
 	.split__item {
 		margin-bottom: rhythm(1);
+
+		&.is-bottom-padding {
+			padding-bottom: rhythm(3);
+		}
 
 		&::after {
 			content: '';
@@ -344,3 +354,11 @@ html {
 
 
 @import "modules/gallery";
+
+
+.e_mail_link {
+	&::after {
+		margin-left: 10px;
+		@include svg_sprite_mail();
+	}
+}

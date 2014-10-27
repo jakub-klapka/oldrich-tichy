@@ -3,12 +3,12 @@
 %typo {
     font-family: "Adelle Sans", Arial;
 
-    h1, h2, h3, h4, h5, h6, p, blockquote, .split, .show_more__button {
+    h1, h2, h3, h4, h5, h6, p, blockquote, .split, .show_more__button, hr {
         margin-top: 0;
         margin-bottom: rhythm(1);
     }
 
-    > h1, > h2, > h3, > h4, > h5, > h6, > p, > blockquote, > .split, > .show_more__button {
+    > h1, > h2, > h3, > h4, > h5, > h6, > p, > blockquote, > .split, > .show_more__button, hr {
         &:last-child {
             margin-bottom: 0;
         }
@@ -31,6 +31,13 @@
 
     h3 {
         @include rhythm-text( 16px );
+    }
+
+    hr {
+        border: none;
+        background: none;
+        height: 1px;
+        border-top: 1px solid lighten( $light_blue, 50% );
     }
 
     .float {

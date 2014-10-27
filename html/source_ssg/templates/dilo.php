@@ -23,7 +23,7 @@
 			<div class="gallery__items">
 
 				<?php include( dirname( __DIR__ ) . '/dilo/dilo.php' ); ?>
-				<?php foreach( $dilo as $item ) : ?>
+				<?php foreach( array_reverse( $dilo ) as $item ) : ?>
 					<?php
 						$image_file = dirname( dirname( __DIR__ ) ) . '/source_images/dilo/' . $item['filename'] . '.jpg';
 						$thumb_file = dirname( dirname( __DIR__ ) ) . '/source_images/dilo/' . $item['filename'] . '_thumb.jpg';
@@ -42,10 +42,12 @@
 						     class="gallery__items__item__image" />
 						<div class="gallery__items__item__description"><?= $item['name']; ?></div>
 						<div class="gallery__items__item__description_placeholder" aria-hidden="true">
-							<?php if( $item['year'] ) : ?><strong><?= $item['year']; ?></strong>&nbsp;|&nbsp;<?php endif; ?>
-							<?php if( $item['name'] ) : ?><strong><?= $item['name']; ?></strong>&nbsp;|&nbsp;<?php endif; ?>
-							<?php if( $item['type'] ) : ?><?= $item['type']; ?>&nbsp;|&nbsp;<?php endif; ?>
-							<?php if( $item['size'] ) : ?><?= $item['size']; ?><?php endif; ?>
+							<?php ob_start(); ?>
+								<?php if( isset( $item['year'] ) ) : ?><strong><?= $item['year']; ?></strong>&nbsp;|&nbsp;<?php endif; ?>
+								<?php if( isset( $item['name'] ) && !empty( $item['name'] ) ) : ?><strong><?= $item['name']; ?></strong>&nbsp;|&nbsp;<?php endif; ?>
+								<?php if( isset( $item['type'] ) ) : ?><?= $item['type']; ?>&nbsp;|&nbsp;<?php endif; ?>
+								<?php if( isset( $item['size'] ) ) : ?><?= $item['size']; ?><?php endif; ?>
+							<?php $desc = ob_get_clean(); echo preg_replace( '/\s+/', '', $desc ); ?>
 						</div>
 					</div>
 				<?php endforeach; ?>

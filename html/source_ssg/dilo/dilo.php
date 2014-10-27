@@ -712,12 +712,22 @@ $dilo = array(
 		'size' => '150 x 200 cm'
 	),
 	array(
+		'filename' => 'kresby_01',
+		'name' => '',
+		'cat' => 'kresby'
+	),
+	array(
 		'filename' => 'pred_bouri_olej_70x75_2013',
 		'cat' => 'obrazy',
 		'name' => 'Před bouří',
 		'year' => '2013',
 		'type' => 'olej',
 		'size' => '70 x 75 cm'
+	),
+	array(
+		'filename' => 'kresby_02',
+		'name' => '',
+		'cat' => 'kresby'
 	),
 	array(
 		'filename' => 'stavba_olej_50x120_2013',
@@ -736,12 +746,22 @@ $dilo = array(
 		'size' => '100 x 140 cm'
 	),
 	array(
+		'filename' => 'kresby_03',
+		'name' => '',
+		'cat' => 'kresby'
+	),
+	array(
 		'filename' => 'usvit_olej_40x60_2013',
 		'cat' => 'obrazy',
 		'name' => 'Úsvit',
 		'year' => '2013',
 		'type' => 'olej',
 		'size' => '40 x 60 cm'
+	),
+	array(
+		'filename' => 'kresby_04',
+		'name' => '',
+		'cat' => 'kresby'
 	),
 	array(
 		'filename' => 'velika_noc_olej_40x30_2013',
@@ -752,12 +772,22 @@ $dilo = array(
 		'size' => '40 x 30 cm'
 	),
 	array(
+		'filename' => 'kresby_05',
+		'name' => '',
+		'cat' => 'kresby'
+	),
+	array(
 		'filename' => 'venec_olej_100x100_2013',
 		'cat' => 'obrazy',
 		'name' => 'Věnec',
 		'year' => '2013',
 		'type' => 'olej',
 		'size' => '100 x 100 cm'
+	),
+	array(
+		'filename' => 'kresby_06',
+		'name' => '',
+		'cat' => 'kresby'
 	),
 	array(
 		'filename' => 'venecek_olej_80x90_2013',
@@ -768,6 +798,11 @@ $dilo = array(
 		'size' => '80 x 90 cm'
 	),
 	array(
+		'filename' => 'kresby_06_grain',
+		'name' => '',
+		'cat' => 'kresby'
+	),
+	array(
 		'filename' => 'vetveni_olej_100x95_2013',
 		'cat' => 'obrazy',
 		'name' => 'Větvení',
@@ -776,12 +811,22 @@ $dilo = array(
 		'size' => '100 x 95 cm'
 	),
 	array(
+		'filename' => 'kresby_07',
+		'name' => '',
+		'cat' => 'kresby'
+	),
+	array(
 		'filename' => 'vrs_olej_100x150_2013',
 		'cat' => 'obrazy',
 		'name' => 'Vrš',
 		'year' => '2013',
 		'type' => 'olej',
 		'size' => '100 x 150 cm'
+	),
+	array(
+		'filename' => 'oldrich_doslovo_01',
+		'name' => '',
+		'cat' => 'kresby'
 	),
 	array(
 		'filename' => 'vzpominka_na_br_olej_50x60_2013',

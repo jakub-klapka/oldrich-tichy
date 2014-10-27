@@ -33,7 +33,7 @@
 
 <section class="image_paralax">
 	<div class="image_paralax__image" style="padding-top: 100%;"><!-- (width/height)*100 -->
-		<img data-original="build/images/paralax_1.jpg" alt="" width="1337" height="1337"/>
+		<img data-original="<?= $root; ?>images/paralax_1.jpg" alt="" width="1337" height="1337"/>
 	</div>
 </section>
 
@@ -45,69 +45,7 @@
 	</div>
 </section>
 
-<section class="content is-inverse">
-	<div class="content__inner">
-
-		<div id="vystavy" class="content__placeholder"></div>
-
-		<h1 class="content__heading">Výstavy</h1>
-
-		<h2 class="content__subheading">Samostatné výstavy</h2>
-
-		<div class="split">
-			<section class="split__item">
-				<header class="split__item__heading"><time datetime="2014">2014</time></header>
-				<div class="split__item__content">
-					Lorem ipsum dolor sit amet. <br/>
-					Lorem ipsum dolor sit amet. <br/>
-					Lorem ipsum dolor sit amet. <br/>
-					Lorem ipsum dolor sit amet. <br/>
-				</div>
-			</section>
-			<section class="split__item">
-				<header class="split__item__heading"><time datetime="2014">2013</time></header>
-				<div class="split__item__content">
-					Lorem ipsum dolor sit amet. <br/>
-					Lorem ipsum dolor sit amet. <br/>
-					Lorem ipsum dolor sit amet. <br/>
-					Lorem ipsum dolor sit amet. <br/>
-				</div>
-			</section>
-			<section class="split__item">
-				<header class="split__item__heading"><time datetime="2014">2012</time></header>
-				<div class="split__item__content">
-					Lorem ipsum dolor sit amet. <br/>
-					Lorem ipsum dolor sit amet. <br/>
-					Lorem ipsum dolor sit amet. <br/>
-					Lorem ipsum dolor sit amet. <br/>
-				</div>
-			</section>
-		</div>
-
-		<h2>účast na kolektivních výstavách</h2>
-
-		<section class="split__item">
-			<header class="split__item__heading"><time datetime="2014">2014</time></header>
-			<div class="split__item__content">
-				Lorem ipsum dolor sit amet. <br/>
-				Lorem ipsum dolor sit amet. <br/>
-				Lorem ipsum dolor sit amet. <br/>
-				Lorem ipsum dolor sit amet. <br/>
-			</div>
-		</section>
-		<section class="split__item">
-			<header class="split__item__heading"><time datetime="2014">2013</time></header>
-			<div class="split__item__content">
-				Lorem ipsum dolor sit amet. <br/>
-				Lorem ipsum dolor sit amet. <br/>
-				Lorem ipsum dolor sit amet. <br/>
-				Lorem ipsum dolor sit amet. <br/>
-			</div>
-		</section>
-
-
-	</div>
-</section>
+<?php include( 'vystavy.php' ); ?>
 
 <section class="image_paralax">
 	<div class="image_paralax__image" style="padding-top: 100%;"><!-- (width/height)*100 -->
@@ -115,115 +53,7 @@
 	</div>
 </section>
 
-<section class="content">
-	<article class="content__inner">
-
-		<div id="texty" class="content__placeholder"></div>
-
-		<h1 class="content__heading">Texty</h1>
-		<div class="split">
-			<section class="split__item">
-				<header class="split__item__heading"><time datetime="2014">2014</time></header>
-				<div class="split__item__content">
-					<h3 class="split__heading">Neumann, Ivan: <em>Hluboko v lesích</em><br/>
-						Lidová demokracie, 1988</h3>
-					<div class="show_more" id="show_more_4" aria-hidden="true">
-						<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolorem, ipsum modi
-							nostrum omnis quaerat quasi repellat rerum veniam? Accusantium ad cum minima odio
-							placeat qui quod rem reprehenderit, similique!</p>
-
-						<p>Accusamus deserunt ipsam nobis quam reprehenderit voluptates. A asperiores aut
-							consectetur deserunt eligendi fugiat laudantium nesciunt non officia, officiis provident
-							quas quia rerum sunt tempore totam, velit vero voluptates voluptatibus.</p>
-
-						<p>Dolor eos ipsa natus quae! Adipisci aperiam debitis dignissimos dolorem est
-							exercitationem facere fugiat id illum incidunt ipsum nam nesciunt nihil, nobis
-							perspiciatis quam reprehenderit repudiandae? Dolorem eveniet fuga incidunt.</p>
-
-						<p>Accusamus in quasi temporibus. Atque dolorem ducimus eos esse eum excepturi fuga fugiat,
-							incidunt laborum laudantium, optio pariatur provident quia quo repellat rerum sapiente?
-							A accusamus amet ex fuga obcaecati!</p>
-					</div>
-
-					<h3 class="split__heading">Ševeček, Ludvík:  <em>Malba jako prostředek bytostné komunikace</em><br/>
-						Nepublikovaný text, 1988, archiv autora</h3>
-					<div class="show_more" id="show_more_5" aria-hidden="true">
-						<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolorem, ipsum modi
-							nostrum omnis quaerat quasi repellat rerum veniam? Accusantium ad cum minima odio
-							placeat qui quod rem reprehenderit, similique!</p>
-
-						<p>Accusamus deserunt ipsam nobis quam reprehenderit voluptates. A asperiores aut
-							consectetur deserunt eligendi fugiat laudantium nesciunt non officia, officiis provident
-							quas quia rerum sunt tempore totam, velit vero voluptates voluptatibus.</p>
-
-						<p>Dolor eos ipsa natus quae! Adipisci aperiam debitis dignissimos dolorem est
-							exercitationem facere fugiat id illum incidunt ipsum nam nesciunt nihil, nobis
-							perspiciatis quam reprehenderit repudiandae? Dolorem eveniet fuga incidunt.</p>
-
-						<p>Accusamus in quasi temporibus. Atque dolorem ducimus eos esse eum excepturi fuga fugiat,
-							incidunt laborum laudantium, optio pariatur provident quia quo repellat rerum sapiente?
-							A accusamus amet ex fuga obcaecati!</p>
-					</div>
-
-
-				</div>
-			</section>
-
-			<section class="split__item">
-				<header class="split__item__heading"><time datetime="2014">2013</time></header>
-				<div class="split__item__content">
-					<h3 class="split__heading">Neumann, Ivan: <em>Hluboko v lesích</em><br/>
-						Lidová demokracie, 1988</h3>
-					<div class="show_more" id="show_more_4" aria-hidden="true">
-						<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolorem, ipsum modi
-							nostrum omnis quaerat quasi repellat rerum veniam? Accusantium ad cum minima odio
-							placeat qui quod rem reprehenderit, similique!</p>
-
-						<p>Accusamus deserunt ipsam nobis quam reprehenderit voluptates. A asperiores aut
-							consectetur deserunt eligendi fugiat laudantium nesciunt non officia, officiis provident
-							quas quia rerum sunt tempore totam, velit vero voluptates voluptatibus.</p>
-
-						<p>Dolor eos ipsa natus quae! Adipisci aperiam debitis dignissimos dolorem est
-							exercitationem facere fugiat id illum incidunt ipsum nam nesciunt nihil, nobis
-							perspiciatis quam reprehenderit repudiandae? Dolorem eveniet fuga incidunt.</p>
-
-						<p>Accusamus in quasi temporibus. Atque dolorem ducimus eos esse eum excepturi fuga fugiat,
-							incidunt laborum laudantium, optio pariatur provident quia quo repellat rerum sapiente?
-							A accusamus amet ex fuga obcaecati!</p>
-					</div>
-
-					<h3 class="split__heading">Ševeček, Ludvík:  <em>Malba jako prostředek bytostné komunikace</em><br/>
-						Nepublikovaný text, 1988, archiv autora</h3>
-					<div class="show_more" id="show_more_5" aria-hidden="true">
-						<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolorem, ipsum modi
-							nostrum omnis quaerat quasi repellat rerum veniam? Accusantium ad cum minima odio
-							placeat qui quod rem reprehenderit, similique!</p>
-
-						<p>Accusamus deserunt ipsam nobis quam reprehenderit voluptates. A asperiores aut
-							consectetur deserunt eligendi fugiat laudantium nesciunt non officia, officiis provident
-							quas quia rerum sunt tempore totam, velit vero voluptates voluptatibus.</p>
-
-						<p>Dolor eos ipsa natus quae! Adipisci aperiam debitis dignissimos dolorem est
-							exercitationem facere fugiat id illum incidunt ipsum nam nesciunt nihil, nobis
-							perspiciatis quam reprehenderit repudiandae? Dolorem eveniet fuga incidunt.</p>
-
-						<p>Accusamus in quasi temporibus. Atque dolorem ducimus eos esse eum excepturi fuga fugiat,
-							incidunt laborum laudantium, optio pariatur provident quia quo repellat rerum sapiente?
-							A accusamus amet ex fuga obcaecati!</p>
-					</div>
-
-
-				</div>
-			</section>
-
-
-
-
-		</div>
-
-	</article>
-</section>
-
+<?php include( 'texty.php' ); ?>
 
 <section class="image_paralax">
 	<div class="image_paralax__image" style="padding-top: 100%;"><!-- (width/height)*100 -->

@@ -63,9 +63,10 @@
 
             this.full_image_image
                 .attr( 'src', '' )
-                .attr( 'src', image.data( 'full' ) )
                 .attr( 'width', image.data( 'width' ) )
-                .attr( 'height', image.data( 'height' ) );
+                .attr( 'height', image.data( 'height' ) )
+                .attr( 'alt', image.data( 'alt' ) )
+                .attr( 'src', image.data( 'full' ) );
             this.onHeightChange();
             this.full_image_desc.html( image.find( '.gallery__items__item__description_placeholder' ).html() );
 

@@ -126,6 +126,7 @@
                                 var elements_left = elements.length;
                                 settings.load.call(self, elements_left, settings);
                             }
+                            $( document ).trigger( 'lumi_height_changed' );
                         })
                         .attr("src", $self.attr("data-" + settings.data_attribute));
                 }

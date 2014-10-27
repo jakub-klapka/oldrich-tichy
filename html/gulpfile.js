@@ -15,18 +15,27 @@ var gulp = require( 'gulp' ),
 	merge_stream = require( 'merge-stream' ),
 	path = require( 'path' ),
 	livereload = require( 'gulp-livereload' ),
+	uglify = require( 'gulp-uglify' ),
+	concat = require( 'gulp-concat' ),
+	shell = require( 'gulp-shell' ),
+	sync = require( 'gulp-sync' )(gulp),
 	svg_sprites = require( 'gulp-svg-sprites' ),
-	imagemin = require( 'gulp-imagemin' ),
-	requirejs = require( 'gulp-requirejs' ),
-	run = require( 'gulp-run' ),
-	shell = require( 'gulp-shell' );
+	fs = require( 'fs' ),
+	imagemin = require( 'gulp-imagemin' );
 
 var sass_config = {
-
+	outputStyle: 'compressed'
 };
 
 var imagemin_config = {
 	progressive: true
+};
+
+var plumber_config = {
+	errorHandler: function(e) {
+		console.log( e.toString() );
+		this.emit('end');
+	}
 };
 
 var dev_tasks = [];
@@ -92,9 +101,25 @@ JS
  */
 gulp.task( 'js', function(){
 
-	return gulp.src('')
-		.pipe( shell( 'r.js.cmd -o name="layout" out="../build/js/layout.js" mainConfigFile="_config.js" findNestedDependencies=true',
-		{ cwd: 'source_js' }) );
+	var html = fs.readFileSync( 'index.html' ).toString();
+	var script_block = html.match( /<!-- build:js -->([\s\S])+<!-- \/build:js -->/g )[0];
+	var regexp = /src="(.+?)"/g;
+	var scripts = [];
+	var match = true;
+	while (match !== null) {
+		// matched text: match[0]
+		// match start: match.index
+		// capturing group n: match[n]
+		match = regexp.exec( script_block );
+		if( match !== null ) {
+			scripts.push( match[1] );
+		}
+	}
+
+	return gulp.src( scripts )
+		.pipe( concat( 'layout.js', {newLine: ';'} ) )
+		.pipe( uglify() )
+		.pipe( gulp.dest( 'build/js' ) );
 
 } );
 
@@ -129,6 +154,22 @@ gulp.task( 'fonts', function(){
 
 
 /*
+SSG
+ */
+gulp.task( 'ssg', function() {
+
+	return gulp.src('')
+		.pipe( plumber( plumber_config ) )
+		.pipe( shell( 'php -f generate.php', { cwd: 'source_ssg' } ) );
+
+} );
+gulp.task( 'ssg_watch', function() {
+	gulp.watch( 'source_ssg/**/*', [ 'ssg' ] );
+} );
+dev_tasks.push( 'ssg_watch' );
+
+
+/*
 Livereload
  */
 gulp.task( 'livereload', function(){
@@ -143,3 +184,5 @@ dev_tasks.push( 'livereload' );
 Task def
  */
 gulp.task( 'dev', dev_tasks );
+gulp.task( 'frontend', [ 'css', 'fonts', 'images', 'js' ] );
+gulp.task( 'default', sync.sync( [ 'frontend', 'ssg' ] ) );

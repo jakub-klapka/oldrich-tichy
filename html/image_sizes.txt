@@ -1,3 +1,5 @@
 Dilo:
 	full: max 950x700px
 	thumb: max 300x300px
+
+paralax: 1:1 ratio 1240px at least

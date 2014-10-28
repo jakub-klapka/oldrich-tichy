@@ -1,5 +1,5 @@
 <?php
-$year = '2014';
+$year = '1988';
 
 $heading = <<<'HTML'
 Ševeček, Ludvík:  <em>Malba jako prostředek bytostné komunikace</em><br/>

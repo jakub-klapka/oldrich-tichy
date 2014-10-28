@@ -1,5 +1,5 @@
 <?php
-$year = '2013';
+$year = '1988';
 
 $heading = <<<'HTML'
 Neumann, Ivan: <em>Hluboko v lesích</em><br/>

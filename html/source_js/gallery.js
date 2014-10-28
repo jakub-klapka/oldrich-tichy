@@ -6,6 +6,7 @@
         init: function( el ) {
 
             this.gallery = el;
+            this.gallery_anchor = this.gallery.data('gallery-anchor');
             this.full_image_el = this.gallery.find('.gallery__full_image');
             this.full_image_image = this.full_image_el.find( '.gallery__full_image__image' );
             this.full_image_close = this.full_image_el.find( '.gallery__full_image__close' );
@@ -77,7 +78,7 @@
             this.full_open = true;
 
             if( scroll ) {
-                $( 'body, html' ).animate( { scrollTop: $( '#dilo' ).offset().top }, 500 );
+                $( 'body, html' ).animate( { scrollTop: $( '#' + this.gallery_anchor ).offset().top }, 500 );
             }
 
             this.getPrevNext( image );
@@ -160,6 +161,7 @@
                 complete: function( el ){
                     $( el ).hide();
                     self.onHeightChange();
+                    $( '[data-original]' ).lazyload();
                 }
             } );
             new_items.velocity( 'fadeIn', {

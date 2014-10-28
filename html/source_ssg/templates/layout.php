@@ -26,7 +26,7 @@
 			<div class="toolbar__navigation__indicator" aria-hidden="true" id="menu_indicator"></div>
 		</nav>
 	</div>
-	<a class="toolbar__language_link" href="<?= $root . '/' . $other_lang_suffix; ?>"><?= $other_lang; ?></a>
+	<a class="toolbar__language_link" href="<?= $root . $other_lang_suffix; ?>"><?= $other_lang; ?></a>
 </header>
 
 <?php include( 'journal.php' ); ?>

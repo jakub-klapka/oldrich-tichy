@@ -1,6 +1,9 @@
 <?php
-
-$files = glob( dirname( __DIR__ ) . '/texty/*.php' );
+if( $lang === 'en_US' ) {
+	$files = glob( dirname( __DIR__ ) . '/texty/en/*.php' );
+} else {
+	$files = glob( dirname( __DIR__ ) . '/texty/*.php' );
+}
 $files = array_reverse( $files );
 
 $texty = array();

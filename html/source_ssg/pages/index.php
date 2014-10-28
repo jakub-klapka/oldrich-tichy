@@ -1,5 +1,6 @@
 <?php
 $lang = 'cs_CZ';
+$lang_file_suffix = '';
 $home_slide_items = array( 'obrazy', 'kresby', 'objekty' );
 $scroll_down = 'Posunout níže';
 

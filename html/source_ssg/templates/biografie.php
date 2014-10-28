@@ -5,7 +5,7 @@
 
 		<h1 class="content__heading"><?= $sections['biografie']['name']; ?></h1>
 		<div class="split">
-			<?php include( dirname( __DIR__ ) . '/biografie/biografie.php' ); ?>
+			<?php include( dirname( __DIR__ ) . '/biografie/biografie' . $lang_file_suffix . '.php' ); ?>
 			<?php foreach( $biografie as $year => $content ) : ?>
 				<section class="split__item">
 					<header class="split__item__heading"><time datetime="<?= $year; ?>"><?= $year; ?></time></header>

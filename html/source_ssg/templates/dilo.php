@@ -5,7 +5,7 @@
 
 		<h1 class="content__heading"><?= $sections['dilo']['name']; ?></h1>
 
-		<div class="gallery">
+		<div class="gallery" data-gallery-anchor="<?= $sections['dilo']['lang_id']; ?>">
 			<ul class="gallery__menu">
 				<?php $i = 1; foreach( $dilo_cats as $cat ) : ?>
 					<li class="gallery__menu__item<?php if( $i === 1 ) : ?> active<?php endif; ?>"><button data-cat="<?= $cat['id']; ?>"><?= $cat['name']; ?></button></li>
@@ -29,11 +29,24 @@
 						$thumb_file = dirname( dirname( __DIR__ ) ) . '/source_images/dilo/' . $item['filename'] . '_thumb.jpg';
 						$image_size = getimagesize( $image_file );
 						$thumb_size = getimagesize( $thumb_file );
+						if( $lang === 'en_US' ) {
+							$item['name'] = $item['en_name'];
+							switch( $item['type'] ) {
+								case 'olej':
+									$item['type'] = 'oil';
+									break;
+								case 'olej na plátně':
+									$item['type'] = 'oil on canvas';
+									break;
+								default:
+									$item['type'] = '';
+							}
+						}
 					?>
 					<div class="gallery__items__item" data-full="<?= $root; ?>images/dilo/<?= $item['filename']; ?>.jpg"
 					     data-width="<?= $image_size[0]; ?>"
 					     data-height="<?= $image_size[1]; ?>"
-					     data-cat="<?= $item['cat']; ?>"
+					     data-cat="<?= $dilo_cats[$item['cat']]['id']; ?>"
 					     data-alt="<?= $item['name']; ?>" >
 						<img data-original="<?= $root; ?>images/dilo/<?= $item['filename']; ?>_thumb.jpg"
 						     width="<?= $thumb_size[0]; ?>"

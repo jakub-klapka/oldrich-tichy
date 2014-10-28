@@ -5,7 +5,7 @@
 
 		<h1 class="content__heading"><?= $sections['vystavy']['name']; ?></h1>
 
-		<?php include( dirname( __DIR__ ) . '/vystavy/vystavy.php' ); ?>
+		<?php include( dirname( __DIR__ ) . '/vystavy/vystavy' . $lang_file_suffix . '.php' ); ?>
 
 		<?php foreach( $vystavy as $name => $items ) : ?>
 			<h2 class="content__subheading"><?= $name; ?></h2>

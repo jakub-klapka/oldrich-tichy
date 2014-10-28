@@ -21,6 +21,12 @@
 
 			$( window ).on( 'scroll', $.proxy( this.checkForBreakpoint, this ) );
 
+			var self = this;
+			$( document ).on( 'lumi_height_changed', function() {
+				self.setBreakpoints();
+				self.checkForBreakpoint();
+			} );
+
 			this.menu.find('a' ).add( '.home_slider__scroll_down' ).on('click', function(event){
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);

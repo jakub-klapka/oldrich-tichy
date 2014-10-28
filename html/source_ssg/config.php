@@ -2,7 +2,8 @@
 /*
  * Config options
  */
-$root = '';
+$root = 'http://localhost/oldrich_tichy/html/build/';
+$root_rel = '/oldrich_tichy/html/build/';
 
 
 

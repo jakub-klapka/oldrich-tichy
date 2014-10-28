@@ -18,7 +18,7 @@
 				<div class="split__item__content">
 					E-MAIL: <a href="znvygb:byqngvpulfnmnin@frmanz.pm" class="e_mail_link lumi_email_decode">byqngvpulfnmnin@frmanz.pm</a><br/>
 					GSM: 605 467 085<br/>
-					TELEFON: +420 327 321 174
+					<?php if( $lang === 'en_US' ){ echo 'PHONE'; } else { echo 'TELEFON'; }; ?>: +420 327 321 174
 				</div>
 			</section>
 

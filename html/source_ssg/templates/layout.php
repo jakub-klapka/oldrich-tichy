@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Oldřich Tichý</title>
 
-	<link rel="stylesheet" href="<?= $root; ?>css/layout.css"/>
+	<link rel="stylesheet" href="<?= $root; ?>css/layout.css?v=<?= $static_ver; ?>"/>
 </head>
 <body>
 
@@ -52,8 +52,8 @@
 <?php include( 'kontakt.php' ); ?>
 
 </div>
-
-<script type="text/javascript" src="<?= $root; ?>js/layout.js"></script>
+<div id="skrollr-body" style="display: none;"><div style="color: red;"></div></div>
+<script type="text/javascript" src="<?= $root; ?>js/layout.js?v=<?= $static_ver; ?>"></script>
 
 </body>
 </html>

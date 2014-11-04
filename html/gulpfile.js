@@ -17,6 +17,7 @@ var gulp = require( 'gulp' ),
 	livereload = require( 'gulp-livereload' ),
 	uglify = require( 'gulp-uglify' ),
 	concat = require( 'gulp-concat' ),
+	prettify = require( 'gulp-prettify' ),
 	shell = require( 'gulp-shell' ),
 	sync = require( 'gulp-sync' )(gulp),
 	svg_sprites = require( 'gulp-svg-sprites' ),
@@ -156,15 +157,23 @@ gulp.task( 'fonts', function(){
 /*
 SSG
  */
-gulp.task( 'ssg', function() {
+gulp.task( 'ssg_php', function() {
 
 	return gulp.src('')
 		.pipe( plumber( plumber_config ) )
 		.pipe( shell( 'php -f generate.php', { cwd: 'source_ssg' } ) );
 
 } );
+gulp.task( 'ssg', [ 'ssg_php' ], function() {
+
+	return gulp.src( 'build/*.html' )
+		.pipe( plumber( plumber_config ) )
+		.pipe( prettify() )
+		.pipe( gulp.dest( 'build' ) );
+
+} );
 gulp.task( 'ssg_watch', function() {
-	gulp.watch( 'source_ssg/**/*', [ 'ssg' ] );
+	gulp.watch( 'source_ssg/**/*', [ 'ssg_php' ] );
 } );
 dev_tasks.push( 'ssg_watch' );
 

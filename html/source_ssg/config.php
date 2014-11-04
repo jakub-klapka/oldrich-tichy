@@ -2,14 +2,14 @@
 /*
  * Config options
  */
-//$root = 'http://localhost/oldrich_tichy/html/build/';
+//$root = 'http://localhost:12144/oldrich_tichy/html/build/';
 //$root_rel = '/oldrich_tichy/html/build/';
 
 $root = 'http://www.oldrichtichy.lumiart.cz/';
 $root_rel = '/';
 
 
-$static_ver = 1;
+$static_ver = 2;
 
 
 /*

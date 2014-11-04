@@ -31,6 +31,7 @@
 						$thumb_size = getimagesize( $thumb_file );
 						if( $lang === 'en_US' ) {
 							$item['name'] = $item['en_name'];
+							$item['type'] = ( isset( $item['type'] ) ) ? $item['type'] : '';
 							switch( $item['type'] ) {
 								case 'olej':
 									$item['type'] = 'oil';
@@ -55,12 +56,10 @@
 						     class="gallery__items__item__image" />
 						<div class="gallery__items__item__description"><?= $item['name']; ?></div>
 						<div class="gallery__items__item__description_placeholder" aria-hidden="true">
-							<?php ob_start(); ?>
-								<?php if( isset( $item['year'] ) ) : ?><strong><?= $item['year']; ?></strong>&nbsp;|&nbsp;<?php endif; ?>
-								<?php if( isset( $item['name'] ) && !empty( $item['name'] ) ) : ?><strong><?= $item['name']; ?></strong>&nbsp;|&nbsp;<?php endif; ?>
-								<?php if( isset( $item['type'] ) ) : ?><?= $item['type']; ?>&nbsp;|&nbsp;<?php endif; ?>
-								<?php if( isset( $item['size'] ) ) : ?><?= $item['size']; ?><?php endif; ?>
-							<?php $desc = ob_get_clean(); echo preg_replace( '/\s+/', '', $desc ); ?>
+							<?php if( isset( $item['year'] ) ) : ?><strong><?= $item['year']; ?></strong>&nbsp;|&nbsp;<?php endif; ?><!--
+							--><?php if( isset( $item['name'] ) && !empty( $item['name'] ) ) : ?><strong><?= $item['name']; ?></strong>&nbsp;|&nbsp;<?php endif; ?><!--
+							--><?php if( isset( $item['type'] ) ) : ?><?= $item['type']; ?>&nbsp;|&nbsp;<?php endif; ?><!--
+							--><?php if( isset( $item['size'] ) ) : ?><?= $item['size']; ?><?php endif; ?>
 						</div>
 					</div>
 				<?php endforeach; ?>

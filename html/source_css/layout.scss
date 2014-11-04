@@ -71,8 +71,8 @@ html {
 	.home_slider__inner {
 		position: absolute;
 		left: 50%;
-		top: 50%;
-		transform: translate( -50%, -50% );
+		bottom: 10%;
+		transform: translateX( -50% );
 	}
 	%home_slider_text {
 		display: block;
@@ -292,6 +292,10 @@ html {
 		}
 	}
 
+.image_interlude {
+	display: block;
+	margin-left: $logo_width;
+}
 
 .split {
 

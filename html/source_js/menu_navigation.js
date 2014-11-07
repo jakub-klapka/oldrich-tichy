@@ -10,6 +10,8 @@
 			this.menu_items = this.menu.find( 'li' );
 			this.activeBreakpoint = 0;
 			this.indicator = $('#menu_indicator');
+			this.doc_height = $( document ).height();
+			this.window_height = $( window ).height();
 
 			this.setBreakpoints();
 
@@ -19,9 +21,14 @@
 
 		bindEvents: function() {
 
+			var self = this;
+			$( window ).load( function() {
+				self.setBreakpoints();
+				self.checkForBreakpoint();
+			} );
+
 			$( window ).on( 'scroll', $.proxy( this.checkForBreakpoint, this ) );
 
-			var self = this;
 			$( document ).on( 'lumi_height_changed', function() {
 				self.setBreakpoints();
 				self.checkForBreakpoint();
@@ -55,6 +62,9 @@
 			this.breakpoints = breakpoints;
 			this.reversed_breakpoints = breakpoints.slice().reverse();
 
+			this.doc_height = $( document ).height();
+			this.window_height = $( window ).height();
+
 		},
 
 		checkForBreakpoint: function() {
@@ -73,6 +83,11 @@
 					found = true;
 				}
 			} );
+
+			if( ( scroll_position + this.window_height ) >= this.doc_height ) {
+				//on the end of page
+				current_breakpoint = this.breakpoints[this.breakpoints.length - 1];
+			}
 
 			if( this.activeBreakpoint !== current_breakpoint ) {
 				this.switchBreakpoint( current_breakpoint );

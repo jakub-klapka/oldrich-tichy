@@ -40,6 +40,7 @@
                 this.button.addClass( 'is-open' );
                 this.loadImages();
             } else {
+                this.el.parent().velocity( 'scroll', { duration: 500 } );
                 this.el.velocity( 'slideUp', { duration: 500, complete: this.onHeightChange } );
                 this.open = false;
                 this.el.attr( 'aria-hidden', 'true' );

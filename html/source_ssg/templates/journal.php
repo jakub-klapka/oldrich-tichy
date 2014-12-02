@@ -7,7 +7,11 @@
 		<div class="split">
 
 			<?php
-			$items = glob( dirname( __DIR__ ) . '/journal/*.php' );
+			if( $lang === 'en_US' ) {
+				$items = glob( dirname( __DIR__ ) . '/journal/en/*.php' );
+			} else {
+				$items = glob( dirname( __DIR__ ) . '/journal/*.php' );
+			}
 			$items = array_reverse( $items ); ?>
 
 			<?php foreach( $items as $item ) : include( $item ) ?>
@@ -19,7 +23,7 @@
 
 						<?= $above; ?>
 
-						<?php if( $below ) : ?>
+						<?php if( isset( $below ) ) : ?>
 						<div class="show_more" id="show_more_<?php echo $show_more_count; $show_more_count++; ?>" aria-hidden="true">
 							<?= $below; ?>
 						</div>

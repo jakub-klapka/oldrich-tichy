@@ -1,15 +1,14 @@
 <?php
-$date = date_create( '2014-01-01' );
-$heading = 'Journal 1';
+$date = date_create( '2014-10-31' );
+$heading = 'Výstava z posledního roku v GHMP';
 
 $above = <<<'HTML'
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis et eveniet excepturi
-	itaque magnam minima nam porro quas quis similique totam, voluptates? A impedit nam nemo
-	odio provident sapiente.</p>
+<p>31.10.2014 - 15.2.2015 probíhá výstava mých prací z posledního roku v GHMP - Colloredo Mansfeldský palác, Karlova 1 Praha 1.
+Více najdete na <a href="http://www.artalk.cz/2014/11/03/tz-oldrich-tichy/">www.artalk.cz</a>, <a href="http://ceskapozice.lidovky.cz/oldrich-tichy-nahody-neexistuji-do0-/recenze.aspx?c=A141105_203815_pozice-recenze_kasa">ceskapozice.lidovky.cz</a> nebo <a href="http://www.www-kulturaok-eu.cz/news/oldrich-tichy-ziju-sam-ve-zdejsich-lesich-aneb-kdyz-si-v-lese-inspiraci-najdeme-vzdy/">www.kulturaok-eu.cz</a></p>
 
 HTML;
-
+/*
 $below = <<<'HTML'
 
 <p><span data-image_placeholder class="image_placeholder" data-src="//lorempixel.com/200/100/abstract" data-alt="" data-class="float float-left" data-width="200" data-height="100"></span>
@@ -30,3 +29,4 @@ $below = <<<'HTML'
 	A accusamus amet ex fuga obcaecati!</p>
 
 HTML;
+*/

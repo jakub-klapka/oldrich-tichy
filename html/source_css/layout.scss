@@ -294,14 +294,14 @@ html {
 
 .image_interlude {
 	display: block;
-	margin-left: $logo_width;
+	margin: rhythm(2) 0 rhythm(1) $logo_width;
 }
 
 .split {
 
 	}
 	.split__item {
-		margin-bottom: rhythm(1);
+		//margin-bottom: rhythm(2);
 
 		&.is-bottom-padding {
 			padding-bottom: rhythm(3);
@@ -335,11 +335,12 @@ html {
 .show_more {
 	display: none;
 	}
-	.show_more__button {
+	.show_more__button.show_more__button {
 		background: none;
 		border: none;
 		padding: 0;
 		margin: 0;
+		margin-bottom: rhythm(2);
 		transition: transform 500ms;
 
 		&::before {
@@ -359,6 +360,10 @@ html {
 
 @import "modules/gallery";
 
+.copyright {
+	text-align: right;
+	@include rhythm-text(10px);
+}
 
 .e_mail_link {
 	&::after {

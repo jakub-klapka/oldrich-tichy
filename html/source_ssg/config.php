@@ -9,7 +9,7 @@ $root_rel = '/oldrich_tichy/html/build/';
 //$root_rel = '/';
 
 
-$static_ver = 2;
+$static_ver = 3;
 
 
 /*

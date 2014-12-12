@@ -2,8 +2,9 @@
 <html lang="<?= $lang; ?>">
 <head>
 	<meta charset="UTF-8">
-	<title>Oldřich Tichý</title>
+	<title><?= $title; ?></title>
 
+	<meta name="description" content="<?= $desc; ?>"/>
 	<link rel="stylesheet" href="<?= $root; ?>css/layout.css?v=<?= $static_ver; ?>"/>
 
 	<link rel="shortcut icon" href="<?= $root; ?>images/favicon/favicon.ico">
@@ -24,6 +25,17 @@
 	<meta name="msapplication-TileColor" content="#2e3c41">
 	<meta name="msapplication-TileImage" content="<?= $root; ?>images/favicon/mstile-144x144.png">
 	<meta name="msapplication-config" content="<?= $root; ?>images/favicon/browserconfig.xml">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-57331663-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
 
 </head>
 <body>

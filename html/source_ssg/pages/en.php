@@ -1,6 +1,8 @@
 <?php
 $lang = 'en_US';
 $lang_file_suffix = '_en';
+$title = 'Oldřich Tichý - painting, drawing, objects';
+$desc = 'Oficial website of the artist Oldřich Tichý, who specializes in abstract painting.';
 $home_slide_items = array( 'painting', 'drawing', 'objects' );
 $scroll_down = 'Scroll down';
 

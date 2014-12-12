@@ -3,6 +3,18 @@
 $htaccess = <<<'HTACCESS'
 
 <IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteCond %{HTTPS} !=on
+   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+   RewriteCond %{HTTP_HOST} !^www\. [NC]
+   RewriteCond %{SERVER_ADDR} !=127.0.0.1
+   RewriteCond %{SERVER_ADDR} !=::1
+   RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+
+<IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{REQUEST_URI} /en$ [NC]
     RewriteRule . {{root_rel}}en.html

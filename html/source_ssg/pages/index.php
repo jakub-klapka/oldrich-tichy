@@ -1,6 +1,8 @@
 <?php
 $lang = 'cs_CZ';
 $lang_file_suffix = '';
+$title = 'Oldřich Tichý - obrazy, kresby, objekty';
+$desc = 'Oficiální stránky výtvarníka Oldřicha Tichého, který se specializuje na abstraktní malbu.';
 $home_slide_items = array( 'obrazy', 'kresby', 'objekty' );
 $scroll_down = 'Posunout níže';
 

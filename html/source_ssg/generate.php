@@ -27,3 +27,19 @@ include( 'templates/htaccess.php' );
 $htaccess = str_replace( '{{root_rel}}', $root_rel, $htaccess );
 
 file_put_contents( dirname( __DIR__ ) . '/build/' . '.htaccess', $htaccess );
+
+/*
+ * Sitemap
+ */
+include( 'templates/sitemap.php' );
+file_put_contents( dirname( __DIR__ ) . '/build/sitemap.xml', $sitemap );
+
+/*
+ * Robots
+ */
+$robots = <<<TXT
+User-Agent: *
+Disallow:
+TXT;
+
+file_put_contents( dirname( __DIR__ ) . '/build/robots.txt', $robots );

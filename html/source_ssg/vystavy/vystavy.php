@@ -77,7 +77,12 @@ $vystavy = array(
 		),
 		'2014' => array(
 			'Obrazy, Slovácké muzeum Uherské Hradiště',
-			'Jedním tahem těsně nad zemí, gu Karlovy Vary'
+			'Galerie umění Karlovy Vary - Jedním tahem těsně nad zemí',
+			'Galerie hlavního města Prahy - Žiju sám ve zdejších lesích'
+		),
+		'2015' => array(
+			'Výstavní síň Synagoga Hranice na Moravě - Malby, kresby',
+			'Prague house Brusel'
 		)
 	),
 	'Účast na kolektivních výstavách' => array(

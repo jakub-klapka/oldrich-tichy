@@ -20,7 +20,7 @@ var gulp = require( 'gulp' ),
 	prettify = require( 'gulp-prettify' ),
 	shell = require( 'gulp-shell' ),
 	sync = require( 'gulp-sync' )(gulp),
-	svg_sprites = require( 'gulp-svg-sprites' ),
+	//svg_sprites = require( 'gulp-svg-sprites' ),
 	fs = require( 'fs' ),
 	imagemin = require( 'gulp-imagemin' );
 

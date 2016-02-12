@@ -66,7 +66,8 @@ gulp.task( 'svg_sprite', function(){
 /*
 CSS
  */
-gulp.task( 'css', ['svg_sprite'], function(){
+// gulp.task( 'css', ['svg_sprite'], function(){
+gulp.task( 'css', function(){
 	return gulp.src( 'source_css/**/*.scss', { base: 'source_css' } )
 		.pipe( plumber() )
 		.pipe( sass( sass_config ) )

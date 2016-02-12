@@ -21,7 +21,7 @@
 
 						<h3 class="split__heading"><?= $heading; ?></h3>
 
-						<?= $above; ?>
+						<?= str_replace( '{{root}}', $root, $above); ?>
 
 						<?php if( isset( $below ) ) : ?>
 						<div class="show_more" id="show_more_<?php echo $show_more_count; $show_more_count++; ?>" aria-hidden="true">

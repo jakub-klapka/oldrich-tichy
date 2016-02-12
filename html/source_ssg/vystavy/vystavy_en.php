@@ -82,7 +82,9 @@ $vystavy = array(
 		),
 		'2015' => array(
 			'Výstavní síň Synagoga Hranice na Moravě - Malby, kresby',
-			'Prague house Brusel'
+			'Prague house Brusel',
+			'Kroměříž Orlovna',
+			'Galerie Dorka Domažlice'
 		)
 	),
 	'Participation in collective exhibitions' => array(
@@ -162,6 +164,12 @@ $vystavy = array(
 		),
 		'2013' => array(
 			'Reclusus — znovu spolu, galerie Orlovna, Kroměříž'
+		),
+		'2014' => array(
+			'Mikulovské výtvarné symposium (together with V.Bláha, S.Diviš, P.Veselý, J.Pištěk and A.Popaja)'
+		),
+		'2015' => array(
+			'Mikulovské výtvarné symposium (tigether with M.Axmann, L.Filipský, M.Čada, V. Franz and P.Župnik)'
 		)
 	)
 );

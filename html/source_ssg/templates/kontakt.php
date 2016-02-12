@@ -9,7 +9,7 @@
 				<header class="split__item__heading"></header>
 				<div class="split__item__content">
 					Oldřich Tichý<br/>
-					Dojetřice 8<br/>
+					Dojetřice 30<br/>
 					285 06   Sázava
 				</div>
 			</section>

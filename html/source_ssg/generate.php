@@ -43,3 +43,12 @@ Disallow:
 TXT;
 
 file_put_contents( dirname( __DIR__ ) . '/build/robots.txt', $robots );
+
+/*
+ * Copy downloads
+ */
+$files = glob( 'downloads/*' );
+if( !is_dir( dirname( __DIR__ ) . '/build/downloads' ) ) mkdir( dirname( __DIR__ ) . '/build/downloads' );
+foreach( $files as $full_path ) {
+	copy( $full_path, dirname( __DIR__ ) . '/build/downloads/' . basename( $full_path ) );
+}

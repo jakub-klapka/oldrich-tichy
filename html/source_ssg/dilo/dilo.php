@@ -943,5 +943,181 @@ $dilo = array(
 		'year' => '2013',
 		'type' => 'olej',
 		'size' => '50 x 60 cm'
+	),
+	array(
+		'filename' => 'az_do_neb',
+		'cat' => 'obrazy',
+		'name' => 'Až do neb',
+		'type' => 'olej na plátně',
+		'size' => '160 x 110 cm'
+	),
+	array(
+		'filename' => 'havrani',
+		'cat' => 'obrazy',
+		'name' => 'Havrani',
+		'type' => 'olej na plátně',
+		'size' => '110 x 160 cm'
+	),
+	array(
+		'filename' => 'houpy_hou',
+		'cat' => 'obrazy',
+		'name' => 'Houpy hou',
+		'type' => 'olej na plátně',
+		'size' => '160 x 140 cm'
+	),
+	array(
+		'filename' => 'korab_mozna_opily',
+		'cat' => 'obrazy',
+		'name' => 'Koráb možná opilý',
+		'type' => 'olej na plátně',
+		'size' => '90 x 110 cm'
+	),
+	array(
+		'filename' => 'moje_noci',
+		'cat' => 'obrazy',
+		'name' => 'Moje noci',
+		'type' => 'olej na plátně',
+		'size' => '110 x 90 cm'
+	),
+	array(
+		'filename' => 'nad_hlubinou',
+		'cat' => 'obrazy',
+		'name' => 'Nad hlubinou',
+		'type' => 'olej na plátně',
+		'size' => '140 x 160 cm'
+	),
+	array(
+		'filename' => 'nahy_v_trni',
+		'cat' => 'obrazy',
+		'name' => 'Nahý v trní',
+		'type' => 'olej na plátně',
+		'size' => '140 x 160 cm'
+	),
+	array(
+		'filename' => 'nocni_kviti',
+		'cat' => 'obrazy',
+		'name' => 'Noční kvítí',
+		'type' => 'olej na plátně',
+		'size' => '140 x 160 cm'
+	),
+	array(
+		'filename' => 'nocni_letci',
+		'cat' => 'obrazy',
+		'name' => 'Noční letci',
+		'type' => 'olej na plátně',
+		'size' => '30 x 35 cm'
+	),
+	array(
+		'filename' => 'pletivo',
+		'cat' => 'obrazy',
+		'name' => 'Pletivo',
+		'type' => 'olej na plátně',
+		'size' => '120 x 60 cm'
+	),
+	array(
+		'filename' => 'po_schodech',
+		'cat' => 'obrazy',
+		'name' => 'Po schodech',
+		'type' => 'olej na plátně',
+		'size' => '160 x 140 cm'
+	),
+	array(
+		'filename' => 'ranni_hvezda',
+		'cat' => 'obrazy',
+		'name' => 'Ranní hvězda',
+		'type' => 'olej na plátně',
+		'size' => '160 x 110 cm'
+	),
+	array(
+		'filename' => 'rano_a_reva',
+		'cat' => 'obrazy',
+		'name' => 'Ráno a réva',
+		'type' => 'olej na plátně',
+		'size' => '90 x 110 cm'
+	),
+	array(
+		'filename' => 'sit_a_noc',
+		'cat' => 'obrazy',
+		'name' => 'Síť a noc',
+		'type' => 'olej na plátně',
+		'size' => '160 x 180 cm'
+	),
+	array(
+		'filename' => 'stale_vys',
+		'cat' => 'obrazy',
+		'name' => 'Stále výš',
+		'type' => 'olej na plátně',
+		'size' => '160 x 110 cm'
+	),
+	array(
+		'filename' => 'strechy_na_ramenou',
+		'cat' => 'obrazy',
+		'name' => 'Střechy na ramenou',
+		'type' => 'olej na plátně',
+		'size' => '120 x 60 cm'
+	),
+	array(
+		'filename' => 'suche_leto',
+		'cat' => 'obrazy',
+		'name' => 'Suché léto',
+		'type' => 'olej na plátně',
+		'size' => '140 x 160 cm'
+	),
+	array(
+		'filename' => 'telo_krajiny',
+		'cat' => 'obrazy',
+		'name' => 'Tělo krajiny',
+		'type' => 'olej na plátně',
+		'size' => '140 x 160 cm'
+	),
+	array(
+		'filename' => 'vitr',
+		'cat' => 'obrazy',
+		'name' => 'Vítr',
+		'type' => 'olej na plátně',
+		'size' => '160 x 140 cm'
+	),
+	array(
+		'filename' => 'vrabci',
+		'cat' => 'obrazy',
+		'name' => 'Vrabci',
+		'type' => 'olej na plátně',
+		'size' => '110 x 160 cm'
+	),
+	array(
+		'filename' => 'z_kastanu_list',
+		'cat' => 'obrazy',
+		'name' => 'Z kaštanu list',
+		'type' => 'olej na plátně',
+		'size' => '120 x 50 cm'
+	),
+	array(
+		'filename' => 'zavesena_strecha',
+		'cat' => 'obrazy',
+		'name' => 'Zavěšená střecha',
+		'type' => 'olej na plátně',
+		'size' => '70 x 55 cm'
+	),
+	array(
+		'filename' => 'zkamenely_strom',
+		'cat' => 'obrazy',
+		'name' => 'Zkamenělý strom',
+		'type' => 'olej na plátně',
+		'size' => '110 x 90 cm'
+	),
+	array(
+		'filename' => 'zhava_noc',
+		'cat' => 'obrazy',
+		'name' => 'Žhavá noc',
+		'type' => 'olej na plátně',
+		'size' => '160 x 140 cm'
+	),
+	array(
+		'filename' => 'bily_len',
+		'cat' => 'obrazy',
+		'name' => 'Bílý len',
+		'type' => 'olej na plátně',
+		'size' => '160 x 140 cm'
 	)
+	
 );

@@ -3,6 +3,12 @@
 
 		<div id="<?= $sections['journal']['lang_id']; ?>" class="content__placeholder"></div>
 
+		<?php if( !empty( $sections['journal']['video_id'] ) ) : ?>
+			<div class="video_wrap">
+				<iframe width="1024" height="576" src="https://www.youtube.com/embed/<?php echo $sections['journal']['video_id']; ?>?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+		<?php endif; ?>
+
 		<h1 class="content__heading"><?= $sections['journal']['name']; ?></h1>
 		<div class="split">
 

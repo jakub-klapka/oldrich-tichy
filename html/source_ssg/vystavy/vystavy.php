@@ -85,6 +85,9 @@ $vystavy = array(
 			'Prague house Brusel',
 			'Kroměříž Orlovna',
 			'Galerie Dorka Domažlice'
+		),
+		'2016' => array(
+			'Východočeská galerie v Pardubicích - Co je nahoře , je i dole'
 		)
 	),
 	'Účast na kolektivních výstavách' => array(
@@ -170,6 +173,10 @@ $vystavy = array(
 		),
 		'2015' => array(
 			'Mikulovské výtvarné symposium (společně s M.Axmannem, L.Filipským, M.Čadou, V. Franzem a P.Župnikem)'
+		),
+		'2016' => array(
+			'Memento Tiziani - Kroměříž, Galerie Orlovna a Arcibiskupský zámek',
+			'Strom - pocta Jindřichu Průchovi - Uherské Hradiště ,galerie Slováckého muzea'
 		)
 	)
 );

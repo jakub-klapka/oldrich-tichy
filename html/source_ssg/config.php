@@ -12,7 +12,7 @@ $root = 'https://www.oldrichtichy.cz/';
 $root_rel = '/';
 
 
-$static_ver = 4;
+$static_ver = 5;
 
 
 /*

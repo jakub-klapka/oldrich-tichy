@@ -9,7 +9,8 @@ $scroll_down = 'Posunout níže';
 $sections = array(
 	'journal' => array(
 		'lang_id' => 'journal',
-		'name' => 'Journal'
+		'name' => 'Journal',
+		'video_id' => 'hFK8_pcK2NY'
 	),
 	'dilo' => array(
 		'lang_id' => 'dilo',

@@ -88,6 +88,9 @@ $vystavy = array(
 		),
 		'2016' => array(
 			'Východočeská galerie v Pardubicích - Co je nahoře , je i dole'
+		),
+		'2017' => array(
+			'Divadlo Kalich'
 		)
 	),
 	'Účast na kolektivních výstavách' => array(
@@ -177,6 +180,9 @@ $vystavy = array(
 		'2016' => array(
 			'Memento Tiziani - Kroměříž, Galerie Orlovna a Arcibiskupský zámek',
 			'Strom - pocta Jindřichu Průchovi - Uherské Hradiště ,galerie Slováckého muzea'
+		),
+		'2017' => array(
+			'Nová galerie Praha - Řeč Místa'
 		)
 	)
 );

@@ -2,8 +2,8 @@
 /*
  * Config options
  */
-// $root = 'http://localhost/oldrich_tichy/html/build/';
-// $root_rel = '/oldrich_tichy/html/build/';
+// $root = 'http://localhost:8080/';
+// $root_rel = '/';
 
 //$root = 'http://www.oldrichtichy.lumiart.cz/';
 //$root_rel = '/';

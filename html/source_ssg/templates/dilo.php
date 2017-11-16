@@ -30,7 +30,7 @@
 						$image_size = getimagesize( $image_file );
 						$thumb_size = getimagesize( $thumb_file );
 						if( $lang === 'en_US' ) {
-							$item['name'] = $item['en_name'];
+							$item['name'] = isset( $item['en_name'] ) ? $item['en_name'] : '';
 							$item['type'] = ( isset( $item['type'] ) ) ? $item['type'] : '';
 							switch( $item['type'] ) {
 								case 'olej':

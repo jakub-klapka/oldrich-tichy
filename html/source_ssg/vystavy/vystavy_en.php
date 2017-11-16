@@ -91,6 +91,9 @@ $vystavy = array(
 		),
 		'2017' => array(
 			'Divadlo Kalich'
+		),
+		'2018' => array(
+			'Galerie 4MAT Tábor'
 		)
 	),
 	'Participation in collective exhibitions' => array(

@@ -90,10 +90,11 @@ $vystavy = array(
 			'Východočeská galerie v Pardubicích - Co je nahoře , je i dole'
 		),
 		'2017' => array(
-			'Divadlo Kalich'
+			'Divadlo Kalich',
+			'Galerie 4MAT Tábor'
 		),
 		'2018' => array(
-			'Galerie 4MAT Tábor'
+			'Galerie Morzin, Vrchlabí'
 		)
 	),
 	'Účast na kolektivních výstavách' => array(
@@ -185,7 +186,11 @@ $vystavy = array(
 			'Strom - pocta Jindřichu Průchovi - Uherské Hradiště ,galerie Slováckého muzea'
 		),
 		'2017' => array(
-			'Nová galerie Praha - Řeč Místa'
-		)
+			'Nová galerie Praha - Řeč Místa',
+			'GHMP Praha - Nová díla ve sbírkách GHMP'
+		),
+        '2018' => array(
+        	'Galerie výtvarného umění v Chebu - Diplomové práce na AVU 1969 - 1989'
+        )
 	)
 );

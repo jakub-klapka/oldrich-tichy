@@ -95,6 +95,10 @@ $vystavy = array(
 		),
 		'2018' => array(
 			'Galerie Morzin, Vrchlabí'
+		),
+		'2019' => array(
+			'Galerie CREARS Rožnov pod Radhoštěm',
+			'Galerie Via Art Praha'
 		)
 	),
 	'Účast na kolektivních výstavách' => array(

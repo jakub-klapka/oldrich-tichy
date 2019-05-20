@@ -55,5 +55,10 @@ Krajská galerie výtvarného umění ve Zlíně<br/>
 doma i v zahraničí<br/>
 Ministerstvo kultury České republiky<br/>
 Česká národní banka<br/>
+Galerie hlavního města Prahy<br/>
+Východočeská galerie Pardubice<br/>
+Kunstahalle Praha<br/>
+Nadace The  Pudil Family Foundation Praha<br/>
+Galerie umění Karlovy Vary
 </p>
 HTML;

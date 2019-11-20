@@ -98,7 +98,8 @@ $vystavy = array(
 		),
 		'2019' => array(
 			'Galerie CREARS Rožnov pod Radhoštěm',
-			'Galerie Via Art Praha'
+			'Galerie Via Art Praha',
+			'Nová síň Praha'
 		)
 	),
 	'Participation in collective exhibitions' => array(

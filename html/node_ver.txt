@@ -1,0 +1,4 @@
+nvm install 11.15
+nvm use 11.15
+npm install
+npm install -g gulp-cli

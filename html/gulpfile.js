@@ -162,7 +162,7 @@ gulp.task( 'ssg_php', function() {
 
 	return gulp.src('')
 		.pipe( plumber( plumber_config ) )
-		.pipe( shell( 'php -f generate.php', { cwd: 'source_ssg' } ) );
+		.pipe( shell( 'php.exe -f generate.php', { cwd: 'source_ssg' } ) );
 
 } );
 gulp.task( 'ssg', [ 'ssg_php' ], function() {

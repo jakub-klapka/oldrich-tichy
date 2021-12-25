@@ -100,6 +100,10 @@ $vystavy = array(
 			'Galerie CREARS Rožnov pod Radhoštěm',
 			'Galerie Via Art Praha',
 			'Nová síň Praha'
+		),
+		'2021' => array(
+			'Divadlo Kolín',
+			'Galerie Kontrast Liberec'
 		)
 	),
 	'Účast na kolektivních výstavách' => array(
